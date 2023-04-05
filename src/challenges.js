@@ -23,15 +23,70 @@ function concatName(array){
 
 // Desafio 4 - Crie a função footballPoints
 
+function footballPoints(wins, ties){
+  return (wins * 3) + ties;
 
+}
 
 // Desafio 5 - Crie a função highestCount
 
+function highestCount(numeros) {
+  let numeroMaisAlto = Math.max(...numeros);
+  let repeticoes = 0;
+
+  for(let index = 0; index < numeros.length; index++) {
+      if (numeros[index] === numeroMaisAlto){
+        repeticoes++;
+      }
+  }
+  return repeticoes;
+}
+
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
+
+function calcTriangleArea(base, altura){
+  return (base * altura) / 2;
+
+}
+
+function calcRectangleArea(base, altura){
+  return (base * altura)
+
+}
+
+function calcAllAreas(base, altura, forma){
+  if (forma === 'triângulo'){
+    let area1 = calcTriangleArea (base, altura);
+    return (`O valor da área do triângulo é de: ${area1}`)
+  } else if (forma === 'retângulo'){
+    let area2 = calcRectangleArea(base, altura);
+    return (`O valor da área do retângulo é de: ${area2}`)
+  } else {
+    return ('Não foi possível fazer o cálculo, insira uma forma geométrica válida')
+  }
+
+}
+
+
 
 // Desafio 7 - Crie a função catAndMouse
 
+function catAndMouse (mouse, cat1, cat2){
+  let posicaoGato1 = Math.abs(cat1 - mouse);
+  let posicaoGato2 = Math.abs(cat2 - mouse);
+
+  if (posicaoGato1 < posicaoGato2){
+    return ('cat1');
+  } else if (posicaoGato2 < posicaoGato1){
+    return ('cat2');
+  } else {
+    return ('os gatos trombam e o rato foge');
+  }
+}
+
 // Desafio 8 - Crie a função fizzBuzz
+
+
 
 // Desafio 9 - Crie a função encode e a função decode
 
