@@ -1,10 +1,29 @@
 // Desafio 1 - Crie a função compareTrue
 
+function compareTrue(parametro1, parametro2){
+  return parametro1 && parametro2;
+}
+
+const girafa = true;
+const elefante = true;
+const macaco = false;
+
+
 // Desafio 2 - Crie a função splitSentence
+
+function splitSentence (parametro3){
+    return parametro3.split (' ');
+}
 
 // Desafio 3 - Crie a função concatName
 
+function concatName(array){
+  return `${array[array.length - 1 ]}, ${array[0]}`;
+}
+
 // Desafio 4 - Crie a função footballPoints
+
+
 
 // Desafio 5 - Crie a função highestCount
 
