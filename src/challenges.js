@@ -86,11 +86,75 @@ function catAndMouse (mouse, cat1, cat2){
 
 // Desafio 8 - Crie a função fizzBuzz
 
+function fizzBuzz(numeros){
+  let resultado = []
 
+  for (let index = 0; index < numeros.length; index += 1 )
+    if (numeros[index] % 3 === 0 && numeros[index] % 5 === 0) {
+      resultado.push('fizzBuzz');
+    } else if (numeros[index] % 3 === 0 ){
+      resultado.push ('fizz');
+    } else if (numeros[index] % 5 === 0 ){
+      resultado.push('buzz');
+    } else {
+      resultado.push('bug!');
+    }
+
+    return (resultado);
+
+}
 
 // Desafio 9 - Crie a função encode e a função decode
 
+  function encode(parametro4){
+    let vogais = ['a','e','i','o','u'];
+    let numeros = [1,2,3,4,5];
+    let resultado = '';
+
+    for (let index = 0; index < parametro4.length; index += 1){
+      if (vogais.includes(parametro4[index])) {
+        resultado += numeros[vogais.indexOf(parametro4[index])];
+      } else {
+        resultado += parametro4[index];
+      }
+    } 
+      return (resultado);
+
+  }
+
+  function decode(parametro4Codificado){
+    let vogais = ['a','e','i','o','u'];
+    let numeros = ['1','2','3','4','5'];
+    let resultado = '';
+
+    for (let index = 0; index < parametro4Codificado.length; index += 1){
+      if (numeros.includes(parametro4Codificado[index])) {
+        resultado += vogais[numeros.indexOf(parametro4Codificado[index])];
+      } else {
+        resultado += parametro4Codificado[index];
+      }
+    } 
+      return (resultado);
+  }
+
 // Desafio 10 - Crie a função techList
+
+function techList(techs, nome) {
+  if (!techs || techs.length === 0) {
+    return [];
+  }
+
+  techs.sort();
+
+  let resultado = techs.map(tech => {
+    return {
+      tech: tech,
+      name: nome
+    };
+  });
+
+  return resultado;
+} 
 
 // Não modifique essas linhas
 module.exports = {
